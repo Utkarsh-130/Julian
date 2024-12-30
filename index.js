@@ -9,7 +9,7 @@ const client = new Client({
     ],
 });
 
-// Replace with your actual API key
+
 const GEMINI_API_KEY = 'AIzaSyBeo0x0sMfVtgQ-WrxbZ3r9L-VB5ZEWCls';
 const DISCORD_TOKEN = 'MTMwMDA4NDIwMjIwODc1NTc2Mw.GTp7Xs.ypg6NnXpPKPODX9DlS2rt8uQU0YIZdpZ3nXZYI'; 
 
