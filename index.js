@@ -11,7 +11,7 @@ const client = new Client({
 
 // Replace with your actual API key
 const GEMINI_API_KEY = 'AIzaSyBeo0x0sMfVtgQ-WrxbZ3r9L-VB5ZEWCls';
-const DISCORD_TOKEN = 'MTMwMDA4NDIwMjIwODc1NTc2Mw.GTp7Xs.ypg6NnXpPKPODX9DlS2rt8uQU0YIZdpZ3nXZYI'; // Use your actual Discord bot token
+const DISCORD_TOKEN = 'MTMwMDA4NDIwMjIwODc1NTc2Mw.GTp7Xs.ypg6NnXpPKPODX9DlS2rt8uQU0YIZdpZ3nXZYI'; 
 
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -29,7 +29,7 @@ client.on('messageCreate', async (message) => {
         }
 
         try {
-            const response = await axios.post('https://api.gemini.com/v1/ask', { // Use the correct Gemini endpoint
+            const response = await axios.post('https://api.gemini.com/v1/ask', { 
                 prompt: userQuestion,
                 max_tokens: 150,
                 n: 1,
@@ -41,7 +41,7 @@ client.on('messageCreate', async (message) => {
                 },
             });
 
-            const answer = response.data.choices[0].text || 'Sorry, I didn’t get a response.'; // Adjust based on Gemini's response structure
+            const answer = response.data.choices[0].text || 'Sorry, I didn’t get a response.';
             message.channel.send(answer);
         } catch (error) {
             console.error('Error with the API request:', error);
